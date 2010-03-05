@@ -7,6 +7,7 @@ $db_user = "uploads_user";
 $db_pass = "uploads_pass";
 
 // this is where your url will go
+// without http://
 $site_url = "ablu.us";
 
 // name of your site
@@ -32,7 +33,8 @@ $url_length = 3;
 /*  ------- DO NOT TOUCH BELOW HERE ---------  */
 /*  ------- VERY ADVANCED USERS ONLY --------  */
 
-$db = new PDO("mysql:dbname=$db_name;host=localhost", $db_user, $db_pass);
+mysql_connect("localhost", $db_user, $db_pass) or die("Database Connection Error: " . mysql_error());
+mysql_select_db($db_name);
 
 $current = getcwd()."/config.php";
 ?>

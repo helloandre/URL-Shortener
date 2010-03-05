@@ -2,10 +2,11 @@
 include("config.php");
 // safety!
 array_map('mysql_escape_string', $_GET);
+
 if (isset($_GET['i']) && $_GET['i'] != ""):
 	// fetch url 
-	$url_result = $db->query("SELECT * FROM `shorten` WHERE `short` = '$_GET[i]' LIMIT 1");
-	$url = $url_result->fetch(PDO::FETCH_ASSOC);
+	$url_result = msyql_query("SELECT * FROM `shorten` WHERE `short` = '$_GET[i]' LIMIT 1");
+	$url = mysql_fetch_assoc($url_result);
 	
 	/*  ------- ADVANCED USERS ---------  */
 	/*  
@@ -38,7 +39,7 @@ else :
 	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 	<head>
-		<title><?php echo $site_name ?></title>
+		<title><?php echo $site_name ?> - url shortening</title>
 		<style>
 		body {
 			text-align: center;

@@ -32,9 +32,10 @@ along with URL Shortener.  If not, see <http://www.gnu.org/licenses/>.
 	1) open mysql and create a database named `uploads`
 		mysql> CREATE DATABASE `uploads`;
 	2) give permissions to uploads_user with uploads_pass
-		mysql> GRANT ALL PRIVILEGES ON `uploads`.* TO `uploads_user`@localhost IDENTIFIED BY 'uploads_pass'; 
+		mysql> GRANT ALL PRIVILEGES ON `uploads`.* TO 'uploads_user'@localhost IDENTIFIED BY 'uploads_pass'; 
 	3) allow the privileges to take affect
 		mysql> FLUSH PRIVILEGES;
+	4) change the $site_url in config.php to whatever your domain is. if you don't change this, it will not work properly. 
 		
  -- NON Default
 	If you chose to change the names of the database, user, or password, you must reflect those changes in /config.php

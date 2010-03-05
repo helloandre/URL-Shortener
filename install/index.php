@@ -27,7 +27,7 @@ include("../config.php");
 	User: <strong><?php echo $db_user ?></strong><br>
 	Password: <strong><?php echo $db_pass ?></strong><br><br>
 	
-	Your site with the following information
+	Your site with the following information<br>
 	url: http://<strong><?php echo $site_url ?></strong><br>
 	name: <strong><?php echo $site_name ?></strong><br><br>
 	

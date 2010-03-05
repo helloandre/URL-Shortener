@@ -8,7 +8,7 @@ $query = "CREATE TABLE IF NOT EXISTS `shorten` (
   `ip` varchar(20) DEFAULT NULL,
   UNIQUE KEY `short` (`short`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1";
-$db->query($query);
+mysql_query($query) or die(mysql_error());
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
