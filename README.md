@@ -1,1 +1,1 @@
-Moved to https://github.com/helloandre/shortnsweet
+moved to [https://github.com/helloandre/shortnsweet](https://github.com/helloandre/shortnsweet)
